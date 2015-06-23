@@ -1,0 +1,248 @@
+$border-width: 1px;
+$border-color: #c8c8c8;
+
+.device-android {
+  width: 395px;
+  position: relative;
+  top: 10px;
+  border: $border-width solid $border-color;
+  border-radius: 35px;
+  background: #fff;
+  //opacity: .5;
+
+  &:before {
+    width: 94%;
+    padding-top: 201.6%;
+    margin-bottom: -6%;
+    /* border-radius: 203px/3%;
+    background: #fff;
+    border-top: $border-width solid $border-color;
+    border-bottom: $border-width solid $border-color; */
+    position: relative;
+    left: 3%;
+    content: "";
+    display: block;
+  }
+
+  .device-top,
+  .device-bottom {
+    width: 94%;
+    height: 10%;
+    position: absolute;
+    display: block;
+    top: -1.75%;
+    border-top: $border-width solid $border-color;
+    left: 3%;
+    background: #fff;
+    border-radius: 60%/37%;
+  }
+  .device-bottom {
+    top: auto;
+    bottom: -1.75%;
+    border-top: none;
+    border-bottom: $border-width solid $border-color;
+  }
+  .device-top:before {
+    content: "";
+    display: block;
+    width: 2.5%;
+    padding-top: 2.5%;
+    border: $border-width solid $border-color;
+    border-radius: 50%;
+    position: absolute;
+    top: 49%;
+    left: 13%;
+  }
+
+  .device-top:after {
+    content: "";
+    width: 4.5%;
+    padding-top: 4.5%;
+    display: block;
+    background-color: #fff;
+    border: $border-width solid $border-color;
+    position: absolute;
+    left: 47.5%;
+    top: 42%;
+    border-radius: 50%;
+  }
+
+  .device-screen {
+    width: 92%;
+    height: 83%;
+    background: #fff;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 7%;
+    left: 4%;
+    border: $border-width solid $border-color;
+
+    .app-scrollable {
+      height: 100%;
+      overflow: hidden;
+      cursor: -moz-grab;
+      cursor: -webkit-grab;
+      cursor: grab;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      margin: 0;
+      height: auto;
+    }
+
+    .app-top,
+    .app-bottom {
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 11.5%;
+      background-size: 100% auto;
+      pointer-events: none;
+    }
+    .app-bottom { 
+      top: auto;
+      bottom: 0;
+      background-position: bottom;
+    }
+  }
+}
+
+.device-ios {
+  width: 258px;
+  position: relative;
+  border: $border-width solid $border-color;
+  border-radius: 34px;
+  background: #fff;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: 207%;
+    pointer-events: none;
+    position: relative;
+    z-index: -1;
+  }
+
+  .device-screen {
+    width: 94%;
+    height: 80.5%;
+    box-sizing: border-box;
+    border: $border-width solid $border-color;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50.25%);
+
+    .app-scrollable {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      z-index: -1;
+      cursor: -moz-grab;
+      cursor: -webkit-grab;
+      cursor: grab;
+    }
+
+    .app-top {
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 11.5%;
+      background-size: 100% auto;
+      pointer-events: none;
+    }
+
+    .app-bottom {
+      position: absolute;
+      z-index: 10;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 9%;
+      background-size: 100% auto;
+      background-position: bottom;
+      pointer-events: none;
+    }
+
+    img {
+      width: 100%;
+      margin: 0;
+      display: block;
+      height: auto;
+    }
+  }
+
+  .device-top {
+    width: 100%;
+    height: 10%;
+    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .device-speaker {
+      box-sizing: border-box;
+      content: "";
+      display: block;
+      width: 20%;
+      height: 14%;
+      border: $border-width solid $border-color;
+      border-radius: 4px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+    }
+  }
+  .device-bottom {
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    .device-button {
+      box-sizing: border-box;
+      width: 14%;
+      border-radius: 50%;
+      border: $border-width solid $border-color;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+
+      &:before {
+        content: "";
+        display: block;
+        width: 100%;
+        padding-top: 100%;
+      }
+    }
+  }
+}
+
+.device-wrap {
+  -webkit-user-select: none;
+  -moz-user-select: moz-none;
+  -ms-user-select: none;
+  user-select: none;
+
+  img {
+    pointer-events: none;
+  }
+}
+
+.app-scrollable.scrolling {
+  cursor: -moz-grabbing !important;
+  cursor: -webkit-grabbing !important;
+  cursor: grabbing !important;
+}
